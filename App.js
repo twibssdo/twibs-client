@@ -1,29 +1,15 @@
-// /* eslint-disable */
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import RootStack from './src/navigation/RootStack';
 
-import Login from './src/components/Login';
+export default class App extends React.Component {
+  constructor() {
+    super();
+    this.state = {};
+  }
 
-class App extends React.Component {
   render() {
     return (
-      <View style={styles.container}>
-          <Text style={styles.logo}>⏱ === 💰</Text>
-      </View>
+      <RootStack />
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  logo: {
-    fontSize: 60,
-  },
-});
-
-export default App;

@@ -1,5 +1,5 @@
 /* eslint-disable */
-export const $COLOR_PRIMARY = '#fff';
+export const $COLOR_PRIMARY = '#5600CD';
 
 export const $COLOR_SECONDARY = '#e0e0e0';
 

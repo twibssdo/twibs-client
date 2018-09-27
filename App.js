@@ -1,6 +1,8 @@
 import React from 'react';
+import View from 'react-native';
 import Tweeber from './src/util/tweeber';
 import RootStack from './src/navigation/RootStack';
+import Location from './src/containers/Location';
 
 const dummyTweebers = [new Tweeber(1), new Tweeber(2), new Tweeber(3)];
 dummyTweebers[0].setName('Will', 'Adamowicz');
@@ -16,7 +18,9 @@ export default class App extends React.Component {
 
   render() {
     return (
-      <RootStack />
+      <View>
+        <Location tweebers={dummyTweebers} makeTweeb={makeTweeb} />
+      </View>
     );
   }
 }

@@ -3,9 +3,13 @@ import { View } from 'react-native';
 import NavBarDummy from '../components/NavBarDummy';
 import Tweeber from '../components/Tweeber';
 
-export default ({ tweebers, makeTweeb }) => (
+const Location = ({ tweebers, makeTweeb }) => (
   <View>
     <NavBarDummy />
-    {tweebers.map(tweeber => <Tweeber props={tweeber} makeTweeb={makeTweeb} />)}
+    {tweebers.map((tweeber, i) => <Tweeber key={`tk${i}`} tweeber={tweeber} makeTweeb={makeTweeb} />)}
   </View>
 );
+
+console.log(typeof Location);
+
+export default Location;

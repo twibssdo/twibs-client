@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Image, Button } from 'react-native';
+import { View, Image, Button, Text } from 'react-native';
 
 export default ({ tweeber, makeTweeb }) => {
   // some logic using tweeber data

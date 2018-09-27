@@ -10,7 +10,8 @@ export default ({ tweeber, makeTweeb }) => {
       <Button
         onPress={() => makeTweeb(tweeber.id)}
         title="Tweeb this fool"
-        disabled={tweeber.offerMade} />
+        disabled={tweeber.offerMade}
+      />
     </View>
   )
 }

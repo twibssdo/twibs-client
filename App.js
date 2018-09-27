@@ -18,9 +18,7 @@ export default class App extends React.Component {
 
   render() {
     return (
-      <View>
-        <Location tweebers={dummyTweebers} makeTweeb={makeTweeb} />
-      </View>
+      <Location tweebers={dummyTweebers} makeTweeb={makeTweeb} />
     );
   }
 }

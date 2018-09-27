@@ -5,7 +5,7 @@ export default ({ tweeber, makeTweeb }) => {
   // some logic using tweeber data
   return (
     <View>
-      <Image source={tweeber.avatarImgUrl} />
+      <Image source={require('../../assets/avatar.jpeg')} style={{width: 80, height: 80}} />
       <Text>{tweeber.fullName}</Text>
       <Button
         onPress={() => makeTweeb(tweeber.id)}

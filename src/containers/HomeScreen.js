@@ -8,7 +8,7 @@ import * as colors from '../constants/colors';
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: colors.$themeOne,
+    backgroundColor: colors.$COLOR_PRIMARY,
     alignItems: 'center',
     justifyContent: 'center',
   },

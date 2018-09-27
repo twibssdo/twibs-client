@@ -1,5 +1,7 @@
 /* eslint-disable */
-export const $themeOne = '#fff';
+export const $COLOR_PRIMARY = '#fff';
+
+export const $COLOR_SECONDARY = '#e0e0e0';
 
 export const $venmo = '#3d95ce';
 

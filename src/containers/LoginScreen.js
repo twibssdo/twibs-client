@@ -3,6 +3,7 @@ import React from 'react';
 import {
   StyleSheet, Text, View, Button,
 } from 'react-native';
+import FBLoginButton from './FBLoginButton'
 import * as colors from '../constants/colors';
 
 const styles = StyleSheet.create({
@@ -38,12 +39,13 @@ export default class Login extends React.Component {
           color={colors.$venmo}
           accessibilityLabel="Log in with Venmo"
         />
-        <Button
+        {/* <Button
           onPress={() => this.authenticateUser('facebook')}
           title="Log in with Facebook"
           color={colors.$facebook}
           accessibilityLabel="Log in with Facebook"
-        />
+        /> */}
+        <FBLoginButton />
       </View>
     );
   }

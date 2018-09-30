@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  StyleSheet, Text, View,
+  StyleSheet, Text, View, Button,
 } from 'react-native';
 import * as colors from '../constants/colors';
 
@@ -31,6 +31,12 @@ export default class Login extends React.Component {
     return (
       <View style={styles.container}>
         <Text style={styles.header}>Welcome Home</Text>
+        <Button
+          onPress={() => this.props.navigation.navigate('Location')}
+          title="Tweebers near me"
+          color={colors.$button}
+          accessibilityLabel="Tweebers near me"
+        />
       </View>
     );
   }

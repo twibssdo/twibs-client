@@ -1,22 +1,15 @@
-import React from 'react';
-import { View, StyleSheet, FlatList, List } from 'react-native';
+import React, { Component } from 'react';
+import { View, StyleSheet, FlatList, List, Text } from 'react-native';
 // import NavBarDummy from '../components/NavBarDummy';
 import TweeberView from '../components/TweeberView';
-import Tweeber from '../util/tweeber';
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    paddingTop: 50,
-  },
-});
 
-class Location extends Component {
+export default class LocationScreen extends Component {
   constructor(props) {
     super(props);
     this.state = {
       tweebers: [],
-    }
+    };
     this.getTweebers = this.getTweebers.bind(this);
   }
 
@@ -26,27 +19,22 @@ class Location extends Component {
 
   getTweebers() {
     // fetch would go here
-    const tweebers = [new Tweeber(), new Tweeber(), new Tweeber(), new Tweeber()];
-    tweebers[0].setName('Colin', 'McCarthy');
-    tweebers[1].setName('Will', 'Adamowicz');
-    tweebers[2].setName('Christopher', 'Washburn');
-    tweebers[3].setName('Shen-shen', 'Wu');
+    const tweebers = require('../util/dummyTweebers');
     this.setState({ tweebers });
   }
 
   render() {
     return (
-      <List style={styles.container}>
-        <FlatList
-          data={this.state.tweebers}
-          renderItem={({ tweeber }) => (
-            <TweeberView tweeber={tweeber} />
-          )}
-        />
-        {/* {tweebers.map((tweeber, i) => <TweeberView key={`tk${i}`} tweeber={tweeber} makeTweeb={makeTweeb} />)} */}
-      </List>
+      <View>
+        <Text style={{fontSize: 22, textAlign: 'center', padding: 20}}>Your Location Here</Text>
+        <View>
+          <FlatList
+            data={this.state.tweebers}
+            renderItem={({ item }) => <TweeberView tweeber={item} key={`tk${item.id}`} />}
+            keyExtractor={(item, index) => `tk${index}`}
+          />
+        </View>
+      </View>
     );
   }
 };
-
-export default Location;

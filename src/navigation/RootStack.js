@@ -1,17 +1,16 @@
-import { createStackNavigator } from 'react-navigation';
-import LoginScreen from '../containers/LoginScreen';
-import HomeScreen from '../containers/HomeScreen';
-import LocationScreen from '../containers/LocationScreen';
-import ProfileScreen from '../containers/ProfileScreen';
+import React from 'react';
+import { createStackNavigator, TouchableOpacity, Text } from 'react-navigation';
+import TabNavigator from './TabNavigator';
+import SettingsScreen from '../containers/SettingsScreen';
 
-export default createStackNavigator(
+const RootStack = createStackNavigator(
   {
-    Login: LoginScreen,
-    Home: HomeScreen,
-    Location: LocationScreen,
-    Profile: ProfileScreen,
+    Main: TabNavigator,
+    Settings: SettingsScreen,
   },
   {
-    initialRouteName: 'Login',
-  }
+    initialRouteName: 'Main',
+  },
 );
+
+export default RootStack;

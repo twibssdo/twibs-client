@@ -1,8 +1,9 @@
 import React from 'react';
 import {
-  StyleSheet, Text, View, TouchableOpacity,
+  StyleSheet, Text, View, TouchableOpacity, Button
 } from 'react-native';
 import * as colors from '../constants/colors';
+import generateHeader from '../util/generateHeader';
 
 const styles = StyleSheet.create({
   container: {
@@ -25,6 +26,8 @@ const styles = StyleSheet.create({
 });
 
 export default class Login extends React.Component {
+  static navigationOptions = generateHeader('Home');
+
   constructor() {
     super();
     this.state = {};
@@ -42,6 +45,16 @@ export default class Login extends React.Component {
           onPress={() => { this.props.navigation.navigate('Location'); }}
           style={styles.button}>
           <Text style={{ fontSize: 18, color: colors.$COLOR_SECONDARY }}> Go to Your Location </Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => { this.props.navigation.navigate('Profile'); }}
+          style={styles.button}>
+          <Text style={{ fontSize: 18, color: colors.$COLOR_SECONDARY }}> Go to Your Profile </Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => { this.props.navigation.navigate('Settings'); }}
+          style={styles.button}>
+          <Text style={{ fontSize: 18, color: colors.$COLOR_SECONDARY }}> Go to Settings </Text>
         </TouchableOpacity>
       </View>
     );

@@ -18,6 +18,9 @@ const styles = StyleSheet.create({
 });
 
 export default class Login extends React.Component {
+  static navigationOptions = {
+    title: 'Login',
+  }
   constructor(props) {
     super(props);
     this.state = {};
@@ -25,7 +28,7 @@ export default class Login extends React.Component {
 
   authenticateUser = (oAuthProvider) => {
     console.log(oAuthProvider);
-    this.props.navigation.navigate('Home');
+    this.props.navigation.navigate('App');
   }
 
   render() {

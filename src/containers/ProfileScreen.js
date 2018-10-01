@@ -1,8 +1,9 @@
 import React from 'react';
 import {
-  StyleSheet, Text, View, Image,
+  StyleSheet, Text, View, Image, Button,
 } from 'react-native';
 import * as colors from '../constants/colors';
+import generateHeader from '../util/generateHeader';
 
 const styles = StyleSheet.create({
   container: {
@@ -30,6 +31,8 @@ const styles = StyleSheet.create({
 });
 
 export default class ProfileScreen extends React.Component {
+  static navigationOptions = generateHeader('Profile');
+
   constructor() {
     super();
     this.state = {

@@ -52,7 +52,7 @@ export default class TweeberView extends React.Component {
           <TouchableOpacity
             onPress={() => console.log('tweebed user with id', tweeber.id)}
             style={styles.button}>
-            <Text style={{color: colors.$COLOR_PRIMARY}}> Tweeb This Fool </Text>
+            <Text style={{color: colors.$COLOR_PRIMARY}}> Send Tweeb </Text>
           </TouchableOpacity>
         </View>
       </View>

@@ -7,4 +7,4 @@ export const $venmo = '#3d95ce';
 
 export const $facebook = '#3B5998';
 
-export const $button = "#ccc0eb";
+export const $lightpurple = "#ccc0eb";

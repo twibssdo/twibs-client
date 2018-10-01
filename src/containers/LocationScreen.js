@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
 import { View, StyleSheet, FlatList, List, Text } from 'react-native';
-// import NavBarDummy from '../components/NavBarDummy';
+import { Icon } from 'react-native-elements';
 import TweeberView from '../components/TweeberView';
-
+import * as colors from '../constants/colors';
+import generateHeader from '../util/generateHeader';
 
 export default class LocationScreen extends Component {
+  static navigationOptions = generateHeader('Location');
+
   constructor(props) {
     super(props);
     this.state = {
@@ -26,7 +29,7 @@ export default class LocationScreen extends Component {
   render() {
     return (
       <View>
-        <Text style={{fontSize: 22, textAlign: 'center', padding: 20}}>Your Location Here</Text>
+        <Text style={{fontSize: 22, textAlign: 'center', padding: 15}}>Some Swanky Bar</Text>
         <View>
           <FlatList
             data={this.state.tweebers}
